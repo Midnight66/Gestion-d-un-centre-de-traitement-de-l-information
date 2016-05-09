@@ -27,36 +27,10 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{layout}
-%\usepackage{picins} %% parpic
-\usepackage{algorithmic,algorithm} %% algorithms
 \usepackage{moreverb} %% boxedverbatim
 \usepackage{xtab} %% xtabular
 \usepackage{placeins} %% vider le cache de flottants
 \usepackage{longtable} %% longtable
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% ALGORITHMIC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\floatname{algorithm}{Algorithme}
-\renewcommand{\algorithmicrequire}{\textbf{Entrée :}}
-\renewcommand{\algorithmicensure}{\textbf{Sortie :}}
-\renewcommand{\algorithmicif}{\textbf{Si}}
-\renewcommand{\algorithmicthen}{\textbf{alors}}
-\renewcommand{\algorithmicelse}{\textbf{Sinon}}
-\renewcommand{\algorithmicwhile}{\textbf{Tant que}}
-\renewcommand{\algorithmicdo}{\textbf{faire}}
-\renewcommand{\algorithmicend}{\textbf{fin}}
-\renewcommand{\algorithmicreturn}{\textbf{Retourner}}
-\renewcommand{\algorithmicfor}{\textbf{Pour}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% LENGTHS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\setlength{\textheight}{630pt}
-\setlength{\footskip}{30pt}
-\setlength{\parindent}{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,15 +47,6 @@
 \definecolor{cyan4}{rgb}{0,0.54,0.54}
 \definecolor{firebrick4}{rgb}{0.54,0.1,0.1}
 \definecolor{gris}{gray}{0.45}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\textcalli}[1]{{\small{\textbf{$\negmedspace$\calligra #1}}}}
-\newcommand{\tsect}[1]{\titre{\section{#1}}}
-\newcommand{\tssect}[1]{\titre{\subsection{#1}}}
-\newcommand{\tsssect}[1]{\titre{\subsubsection{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%% COLOR COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,32 +68,14 @@
 \newcommand{\quotecolor}[1]{\textcolor{quote}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% MATH COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\vect}[1]{\overrightarrow{#1}}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\cdil}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\term}[1]{\textit{\textcolor{maintitle}{#1}}}
-\newcommand{\point}[2]{\item \ora{\underline{#1}} : \textit{#2}}
-\newcommand{\bfp}[2]{\item \textbf{#1} : \textit{#2}}
-\newcommand{\sumparam}[3]{\sideset{}{_{#1}^{#2}}\sum{#3}}
-\newcommand{\sumin}[3]{\sideset{}{_{i=#1}^{#2}}\sum{#3}}
-\newcommand{\sumkn}[3]{\sideset{}{_{k=#1}^{#2}}\sum{#3}}
-\newcommand{\intin}[3]{\sideset{}{_{#1}^{#2}}\int{#3}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\N}{\mathbb{N}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%% THEMING %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\newterm}[1]{\textit{#1}}
 \newcommand{\strong}[1]{\textbf{\titre{#1}}}
 \newcommand{\desctitle}[1]{\underline{#1}}
-\newcommand{\iitem}{\item[$\blacktriangleright$]}
-\newcommand{\iiitem}{\item[$\bullet$]}
+%\newcommand{\iitem}{\item[$\blacktriangleright$]}
+%\newcommand{\iiitem}{\item[$\bullet$]}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%% ENTETE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -151,8 +98,6 @@
 \textit{2\textsuperscript{ème} Master en Sciences Informatiques} \\
 \textit{Finalité spécialisée} \\
 (\url{xavier.dubuc@alumni.umons.ac.be}) \\
-\vspace*{1cm} \\
-\includegraphics[width=0.4\textwidth]{img/UMONS.pdf} \hspace*{0.2\textwidth} %\includegraphics[width=0.4\textwidth]{faculte.pdf}
 }
 
 
@@ -168,6 +113,18 @@
 \begin{document} \begin{sffamily}
 
 \maketitle
+
+\newpage
+
+\textbf{Contributeurs:}
+\renewcommand{\labelitemi}{$\bullet$}
+
+\begin{itemize}
+\item 2016
+\begin{itemize}
+\item Julien Delplanque (\url{julien.delplanque@student.umons.ac.be})
+\end{itemize}
+\end{itemize}
 
 \newpage
 
