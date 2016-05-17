@@ -1,13 +1,14 @@
 \documentclass[10pt,a4paper,oneside,titlepage]{report}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{times}
 \usepackage[frenchb]{babel}
-\usepackage{hyperref} 
-\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor = black, citecolor = black}
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue,
+linkcolor = black, citecolor = black}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -21,7 +22,7 @@
 \usepackage{color}
 \usepackage{mathrsfs}
 \usepackage{graphicx}
-\graphicspath{{pictures/}} 
+\graphicspath{{pictures/}}
 \usepackage{calligra}
 \usepackage{amsthm}
 \usepackage{multirow}
@@ -32,9 +33,9 @@
 \usepackage{placeins} %% vider le cache de flottants
 \usepackage{longtable} %% longtable
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \definecolor{darkred}{rgb}{0.85,0,0}
 \definecolor{darkblue}{rgb}{0,0,0.7}
@@ -48,9 +49,9 @@
 \definecolor{firebrick4}{rgb}{0.54,0.1,0.1}
 \definecolor{gris}{gray}{0.45}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% COLOR COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% COLOR COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\forest}[1]{\textcolor{forestgreen}{#1}}
 \newcommand{\cyan}[1]{\textcolor{cyan4}{#1}}
@@ -67,9 +68,9 @@
 \newcommand{\rouge}[1]{\textcolor{darkred}{#1}}
 \newcommand{\quotecolor}[1]{\textcolor{quote}{#1}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%% THEMING %%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% THEMING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\newterm}[1]{\textit{#1}}
 \newcommand{\strong}[1]{\textbf{\titre{#1}}}
@@ -77,14 +78,16 @@
 %\newcommand{\iitem}{\item[$\blacktriangleright$]}
 %\newcommand{\iiitem}{\item[$\bullet$]}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%% ENTETE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% ENTETE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{sffamily}
 
 \title{
-\begin{Huge}\maintitlecolor{Gestion d'un centre de traitement de l'information}\end{Huge}\\
+\begin{Huge}
+\maintitlecolor{Gestion d'un centre de traitement de l'information}
+\end{Huge}\\
 \vspace*{1cm}
 \begin{LARGE}\titre{\textit{\textbf{Résumé}}}\end{LARGE}
 }
@@ -103,14 +106,17 @@
 
 \end{sffamily}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \addtolength{\hoffset}{-2cm}
 \addtolength{\textwidth}{3cm}
 
-\begin{document} \begin{sffamily}
+% Fix section numbering.
+\renewcommand*\thesection{\arabic{section}}
+
+\begin{document}
 
 \maketitle
 
@@ -132,15 +138,15 @@
 
 \newpage
 
-\renewcommand{\chaptername}{Fichier}
+\section{Objectifs du cours}
 
-\chapter{Slides}
+Formuler des recommandations afin d'atteindre des objectifs en terme :
 
-\noindent \strong{But} : formuler des recommandations afin d'atteindre des objectifs en terme : \begin{itemize}
-\item de satisfaction des utilisateurs,
-\item de qualité des services offerts,
-\item de rentabilité des projets,
-\item d'écologie.
+\begin{itemize}
+\item de satisfaction des utilisateurs;
+\item de qualité des services offerts;
+\item de rentabilité des projets;
+\item et d'écologie.
 \end{itemize}
 
 \section{Le centre informatique}
@@ -148,67 +154,103 @@
 \subsection{Ses missions}
 
 \begin{enumerate}
-\item \textbf{\strong{Mise en place, exploitation et maintenance} des ressources informatiques et audiovisuelles pour les infrastructures communes}\\
-	$\hookrightarrow$ \newterm{fournir à l'ensemble des acteurs de l'université (étudiants, enseignants, chercheurs, \\
+\item \textbf{\strong{Mise en place, exploitation et maintenance} des ressources
+informatiques et audiovisuelles pour les infrastructures communes}\\
+	$\hookrightarrow$ \newterm{fournir à l'ensemble des acteurs de l'université
+    (étudiants, enseignants, chercheurs, \\
 	\indent $\quad$ services administratifs, direction) des :
 	\begin{itemize}
-		\item[$\qquad\blacktriangleright$] ressources informatiques performantes, sécurisées et disponibles,
+		\item[$\qquad\blacktriangleright$] ressources informatiques
+        performantes, sécurisées et disponibles,
 		\item[$\qquad\blacktriangleright$] moyens audiovisuels
 	\end{itemize}
 	\indent $\quad$ sur ses différents campus.} \\
-	\indent $\longrightarrow$ accéder aux bibliothèques, à son compte, moodle, aux salles infos, ... \\
+	\indent $\longrightarrow$ accéder aux bibliothèques, à son compte, moodle,
+    aux salles infos, ... \\
 
-\item  \textbf{\strong{Prévision de l'évolution des systèmes informatiques et élaboration de la politique informatique} (2 à 5 ans) en collaboration avec un conseil de 
-direction} \\
-$\hookrightarrow$ \textit{objectifs de développement à moyen et à long termes (schéma directeur, plan stratégique)}
+\item  \textbf{\strong{Prévision de l'évolution des systèmes informatiques et
+élaboration de la politique informatique} (2 à 5 ans) en collaboration avec un
+conseil de direction} \\
+$\hookrightarrow$ \textit{objectifs de développement à moyen et à long termes
+(schéma directeur, plan stratégique)}
 
-Le \underline{schéma directeur} est un plan d'évolution de l'environnement informatique de l'entreprise à terme de 2 à 5 ans. Il est composé de : \begin{enumerate}
+Le \underline{schéma directeur} est un plan d'évolution de l'environnement
+informatique de l'entreprise à terme de 2 à 5 ans. Il est composé de :
+\begin{enumerate}
 \item analyse de l’existant :« Etat des lieux »
 \item identification des besoins : objectifs stratégiques et opérationnels
 \end{enumerate}
-Il implique \textbf{la direction générale} (choix stratégiques), \textbf{le service informatique} (missions), \textbf{les utilisateurs} (attentes), le \textbf{comité de 
-direction} (approbation des grands axes, projets, investissements) et les \textbf{Comités fonctionnels} (aspects pratiques).
-Il doit être ``adaptable'' (faire face aux imprévus : changement de technologie, retard,...)\\
+Il implique \textbf{la direction générale} (choix stratégiques),
+\textbf{le service informatique} (missions), \textbf{les utilisateurs}
+(attentes), le \textbf{comité de direction} (approbation des grands axes,
+projets, investissements) et les \textbf{Comités fonctionnels} (aspects
+pratiques). Il doit être ``adaptable'' (faire face aux imprévus : changement de
+technologie, retard,...)\\
 
-\item \strong{Adaptation des décisions en fonction des évolutions technologiques.} \\
+\item \strong{Adaptation des décisions en fonction des évolutions
+technologiques.} \\
 
-\item \strong{Fourniture de services centraux d'intér\^et commun} \textit{(messageries,...).}\\
+\item \strong{Fourniture de services centraux d'intér\^et commun}
+\textit{(messageries,...).}\\
 
-\item \strong{Architecture, développement, évolution des infrastructures de réseau informatique et suivi des incidents.}\\
+\item \strong{Architecture, développement, évolution des infrastructures de
+réseau informatique et suivi des incidents.}\\
 
-\item \strong{Développement, suivi et maintenance des applications de gestion spécifiques et des équipements associés.}\\
+\item \strong{Développement, suivi et maintenance des applications de gestion
+spécifiques et des équipements associés.}\\
 
 \item \strong{Développement et maintenance du site web.}\\
 
-\item \strong{Mise en œuvre d'une politique de sécurité, respect de la charte de bon usage des ressources informatiques, déploiement d'outils, maintien de la sécurité et 
-suivi des incidents.}\\
+\item \strong{Mise en œuvre d'une politique de sécurité, respect de la charte de
+bon usage des ressources informatiques, déploiement d'outils, maintien de la
+sécurité et suivi des incidents.}\\
 
-\item \strong{Mise en place de mesures pour assurer la sécurité des données des utilisateurs face aux virus, tentatives de piratage, spam et autres dangers.} \\
+\item \strong{Mise en place de mesures pour assurer la sécurité des données des
+utilisateurs face aux virus, tentatives de piratage, spam et autres dangers.} \\
 
 \item \strong{Formation, conseil, aide et assistances des/aux utilisateurs.} \\
 
 \item \strong{Reconditionnement (recyclage) du matériel.} \\
 
-\item \strong{Installation et mise à disposition d'équipements audiovisuels et multimédia.} \\
+\item \strong{Installation et mise à disposition d'équipements audiovisuels et
+multimédia.} \\
 
-\item \strong{Relations avec les fournisseurs, suivi de contrats de maintenance.} \\
+\item \strong{Relations avec les fournisseurs, suivi de contrats de maintenance.
+} \\
 
 \item \strong{Vitrine informatique.} \\
 
 \item \strong{Veille technologique.} \\
 
-\item \strong{Mise en \oe uvre de moyens permettant de contrôler la situation par rapport aux objectifs définis et facilitant les prises de décision.} \\
-$\hookrightarrow$ \newterm{Par exemple : tableau de bord, audits internes, ... } \\
-Par \underline{tableau de bord}, on entend réellement un tableau de bord comme celui d'une voiture. Il s'agit là d'un outil permettant de visualiser l'état de 
-fonctionnement des services. Ce fonctionnement est évalué en fonction d'objectifs fixés en se basant sur des indicateurs de performances. C'est devenu un outil de pilotage 
-et d'aide à la décision.
+\item \strong{Mise en \oe uvre de moyens permettant de contrôler la situation
+par rapport aux objectifs définis et facilitant les prises de décision.} \\
+$\hookrightarrow$ \newterm{Par exemple : tableau de bord, audits internes, ...
+} \\
+Par \underline{tableau de bord}, on entend réellement un tableau de bord comme
+celui d'une voiture. Il s'agit là d'un outil permettant de visualiser l'état de
+fonctionnement des services. Ce fonctionnement est évalué en fonction
+d'objectifs fixés en se basant sur des indicateurs de performances. C'est devenu
+un outil de pilotage et d'aide à la décision.\\
+
+Par \underline{Indicateur}, on entend ``un élément ou un ensemble d’éléments
+d’information représentative par rapport à une préoccupation ou un objectif,
+résultant de la mesure tangible ou de l’observation d’un état, de la
+manifestation d’un phénomène, d’une réalisation''\footnote{\url{http://formation
+.enap.ca/tbord/intro_frame.htm}}. Celui-ci est principalement formulé en terme
+de:
+\begin{itemize}
+\item Quantité: Nombre, taux, etc\dots;
+\item Qualité: Valeur relative;
+\item Montant: Coût, revenus;
+\item Temps: Fréquence, délai.
+\end{itemize}
 \end{enumerate}
 
 \subsection{Gestion administrative et financière}
 
 \subsubsection{Gestion financière}
 
-Le budget doit couvrir les coûts de matériel, logiciel (achat, licence), maintenance, équipements spéciaux, redevances télécoms, fournitures, consommables, formations, 
+Le budget doit couvrir les coûts de matériel, logiciel (achat, licence), maintenance, équipements spéciaux, redevances télécoms, fournitures, consommables, formations,
 frais généraux, frais de personnel,... Le C.I. évalue ce budget et soumet une proposition chiffrée à la direction en vue de l'acceptation du budget pour l'année suivante.
 Une facturation interne contribue à l'amortissement des équipements divers (5 cents la photocopie par exemple).
 
@@ -224,7 +266,7 @@ Former régulièrement le personnel aux nouvelles technologie afin d'augmenter l
 
 \noindent A l'UMons, le département informatique se compose de $2$ services :
 \begin{enumerate}
-\item \textbf{\strong{le Centre d'Informatique} (\firebrick{CI})} : \newterm{personnel dont les compétences couvrent les domaines de l'informatique et des réseaux, de 
+\item \textbf{\strong{le Centre d'Informatique} (\firebrick{CI})} : \newterm{personnel dont les compétences couvrent les domaines de l'informatique et des réseaux, de
 l'audiovisuel et du multimédia, de la téléphonie.}
 \item \textbf{\strong{le Centre d'Informatique Administrative} (\firebrick{CIA})} : \newterm{analyse, développement, projets}
 \end{enumerate}
@@ -278,16 +320,16 @@ En entreprise, cet organigramme possède une composition variable suivant la tai
 
 \subsection{Recommandations du CLUSIF}
 
-Les centres informatiques ont évolué. Ainsi dans les années 70 il s'agissait de centres vitrines liés au prestige, dans les années 80 ce sont devenus des centres 
-\newterm{blockhaus} liés à la sécurité et dans les années 90 ils sont entrés dans une phase d'intégration où ils sont composés d'une salle informatique centrale, de 
+Les centres informatiques ont évolué. Ainsi dans les années 70 il s'agissait de centres vitrines liés au prestige, dans les années 80 ce sont devenus des centres
+\newterm{blockhaus} liés à la sécurité et dans les années 90 ils sont entrés dans une phase d'intégration où ils sont composés d'une salle informatique centrale, de
 serveurs délocalisés, de réseaux, ... \strong{Le problème majeur est d'envisager la sécurité d'un point de vue global.} \\
 
-Un centre informatique peut voir le jour suite à plusieurs situations : soit on ouvre un nouveau centre (fermeture de l'ancien à cause d'un sinistre, fin de bail, vétusté, 
+Un centre informatique peut voir le jour suite à plusieurs situations : soit on ouvre un nouveau centre (fermeture de l'ancien à cause d'un sinistre, fin de bail, vétusté,
 ...) soit on améliore un ancien centre (suite à une extension ou une restructuration de l'entreprise). \\
 
 \noindent Les acteurs d'un projet d'un centre informatique sont :
 \begin{itemize}
-\item \strong{la direction générale} qui possède le pouvoir de décision et qui représente le maître d'\oe uvre. Cette maîtrise est souvent déléguée à un cadre ou à une 
+\item \strong{la direction générale} qui possède le pouvoir de décision et qui représente le maître d'\oe uvre. Cette maîtrise est souvent déléguée à un cadre ou à une
 société extérieure,
 \item \strong{la fonction informatique} qui doit impérativement \^etre associée au projet car c'est elle qui doit produire le cahier des charges. \\
 \end{itemize}
@@ -303,13 +345,13 @@ Il faut bien étudier les fonctions du centre (\textit{héberger les serveurs, l
 
 \subsubsection{Implantation du centre}
 
-Il faut prendre en compte l'évolution et la possibilité d'extension au niveau des \strong{aspects fonctionnels} \textit{(extension du personnel, missions, ...} et des \strong{aspects organisationnels} \textit{(encombrement, contraintes liées au 
+Il faut prendre en compte l'évolution et la possibilité d'extension au niveau des \strong{aspects fonctionnels} \textit{(extension du personnel, missions, ...} et des \strong{aspects organisationnels} \textit{(encombrement, contraintes liées au
 matériel,...)}. Il faut également prendre en compte les contraintes géographiques en relevant les caractéristiques du site d'implantation (risques naturels, risques du voisinage, ...). \\
 
 Au niveau des besoins généraux, il faut utiliser une bonne nomenclature des locaux-zones fonctionnelles et prendre en compte
 \begin{enumerate}
 \item \strong{les contraintes techniques}\\
-il convient de faire un inventaire des matériels hébergés  \textit{(encombrement, poids, dégagement, climatisation, alimentation électrique, ...) et du personnel \textit{(localisation, éclairage,...)}}. $\Rightarrow$ \strong{premier bilan des besoins 
+il convient de faire un inventaire des matériels hébergés  \textit{(encombrement, poids, dégagement, climatisation, alimentation électrique, ...) et du personnel \textit{(localisation, éclairage,...)}}. $\Rightarrow$ \strong{premier bilan des besoins
 en terme de superficie, d'alimentation électrique et thermique.}
 \item \strong{les contraintes logistiques}\\
 \textit{proximité des secours, chemins d'accès (personnel, livraison, ...), stationnement, ...}
@@ -362,16 +404,16 @@ Définir judicieusement l'emplacement physique compte tenu de diverses contraint
 \subsubsection{Architecture, dimensionnement}
 
 Faire appels à des sociétés de service et aux constructeurs pour les normes d'électricité et les techniques de sécurité incendie.\\
-Divers éléments entrent en ligne de compte. La conception générale : une salle pour les processeurs et les unités disques, une salle pour les imprimantes et les robots de bandes magnétiques, une salle pour stocker les fournitures (papier, ...), une 
-aire de travail et une aire de repos et il faut prévoir des possibilités d'extension. La hauteur conseillée d'une salle est de 3m et cette dernière devrait \^etre constituée d'un plancher technique (30 à 50cm de haut) et d'un double plafond (30 à 50 
-cm de haut) pour le passage des c\^ables, des gaines techniques, de la climatisation, la ventilation, ... La surface du sol dépendra de la place physique occupée par l'ordinateur et ses périphériques. Il faut également prévoir une surface de 
+Divers éléments entrent en ligne de compte. La conception générale : une salle pour les processeurs et les unités disques, une salle pour les imprimantes et les robots de bandes magnétiques, une salle pour stocker les fournitures (papier, ...), une
+aire de travail et une aire de repos et il faut prévoir des possibilités d'extension. La hauteur conseillée d'une salle est de 3m et cette dernière devrait \^etre constituée d'un plancher technique (30 à 50cm de haut) et d'un double plafond (30 à 50
+cm de haut) pour le passage des c\^ables, des gaines techniques, de la climatisation, la ventilation, ... La surface du sol dépendra de la place physique occupée par l'ordinateur et ses périphériques. Il faut également prévoir une surface de
 dégagement autour de chaque dispositif afin de faciliter l'accès lors des interventions sur le matériel et pour la circulation du personnel du service d'exploitation.
 
 \subsection{Techniques spéciales}
 
 \subsubsection{Alimentation électrique de la salle}
 
-Ses caractéristiques sont fournies par le constructeur. On recommande une ligne d'alimentation séparée pour l'informatique. Tous les appareils de la salle doivent \^etre connectés à la m\^eme terre. Si une alimentation sans coupure est requise, on a 
+Ses caractéristiques sont fournies par le constructeur. On recommande une ligne d'alimentation séparée pour l'informatique. Tous les appareils de la salle doivent \^etre connectés à la m\^eme terre. Si une alimentation sans coupure est requise, on a
 recours à un onduleur, un groupe no-break un \strong{UPS} \textit{(Uninterruptible Power Supply)}. En cas de coupure, on a recours à un générateur de courant comme un groupe électrogène diesel.\\
 
 Un \textbf{UPS} permet :\begin{itemize}
@@ -392,7 +434,7 @@ On calcule le dégagement de chaleur (dissipation) par effet Joule (+/- 500 Watt
 
 \subsubsection{Détection et extinction incendie}
 
-Supprimer les causes potentielles (ne pas fumer par exemple), ajouter des détecteurs de fumée ou thermiques. Il existe des moyens appropriés de défense : extinction avec du gaz carbonique ou de l'azote (avec avertissement pour la sécurité des 
+Supprimer les causes potentielles (ne pas fumer par exemple), ajouter des détecteurs de fumée ou thermiques. Il existe des moyens appropriés de défense : extinction avec du gaz carbonique ou de l'azote (avec avertissement pour la sécurité des
 personnes). Il est bien entendu qu'il faut s'assurer que les locaux sont vides avant d'utiliser de telles solutions sur base d'un plan d'évacuation. Une autre technique : les sprinklers (les extincteurs automatiques à eau accrochés au plafond).
 
 \subsubsection{Autres}
@@ -419,12 +461,12 @@ Par exemple, lors du renouvellement des installations informatiques centrales de
 \item satisfaction des utilisateurs, celui-ci est une fonction du temps de réponse qui doit en général \^etre $\leq$ à 1 seconde. Ce dernier est une fonction de la charge qui elle m\^eme est une fonction des $n$ applications et des $m$ utilisateurs. Il faut faire attention aux pics, et donc faire une répartition uniforme des travaux.
 \end{itemize}
 
-Pour amener à bien cet état des lieux, il faudra également relever la \strong{charge des processeurs} pour évaluer le besoin en puissance de CPU, le \strong{taux d'utilisation des mémoires} pour évaluer le besoin en taille de la mémoire et les 
+Pour amener à bien cet état des lieux, il faudra également relever la \strong{charge des processeurs} pour évaluer le besoin en puissance de CPU, le \strong{taux d'utilisation des mémoires} pour évaluer le besoin en taille de la mémoire et les
 \strong{accès disques} pour évaluer la capacité et les performances de ces disques.
 
 \subsubsection{Eléments à définir - Prise en compte des besoins}
 
-Il faudra définir et prendre en compte : 
+Il faudra définir et prendre en compte :
 \begin{itemize}
 \item \textbf{les types d'applications} : \textit{commerciales, scientifiques, bureautiques, ...}
 \item \textbf{les caractéristiques de l'unité centrale} et \textbf{des périphériques} \textit{(CPU, mémoire, canaux)} et se poser les bonnes questions :
@@ -470,7 +512,7 @@ Plusieurs coefficients : \begin{itemize}
 \item le \textbf{MIPS} (\textit{millions d'instructions par seconde}), uniquement valable au sein d'une m\^eme famille de machines,
 \item le \textbf{MFLOPS} (\textit{Million of Floating Point Operations per Second}),
 \item le \textbf{LINPACK} basé sur un ensemble de programmes qui relèvent de l'algèbre linéaire,
-\item les indices \textbf{SPEC} (System Performance Evaluation Corporation) qui est une association de constructeurs, universités, organisation de recherches, consultants, ... qui utilise une suite de programmes (benchmarks) qui vont permettre de 
+\item les indices \textbf{SPEC} (System Performance Evaluation Corporation) qui est une association de constructeurs, universités, organisation de recherches, consultants, ... qui utilise une suite de programmes (benchmarks) qui vont permettre de
 prédire les performances d'une machine pour une charge de travail déterminée. Ces programmes testent les performances du processeur, de la mémoire et du compilateur.
 \item \textbf{TPC} (avec des bases de données)
 \end{itemize}
@@ -481,7 +523,8 @@ Nouvelles contraintes dues à la forte consommation et du fort dégagement de ch
 
 \subsubsection{Hébergement}
 
-Différentes solutions :\begin{enumerate}
+Différentes solutions :
+\begin{enumerate}
 \item Externalisation complète ou en partie du centre informatique (fait par les grands groupes comme Google),
 \item hébergement de certaines ressources comme un site web,
 \item site de back-up (sur un autre site de l'entreprise ou via un site miroir pour les sites très sensibles ou encore un back-up dégradé sur un autre site de l'entreprise).
@@ -489,8 +532,4 @@ Différentes solutions :\begin{enumerate}
 
 \section{Gestion du réseau}
 
-
-
-\chapter{Green book}
-
-\end{sffamily} \end{document}
+\end{document}
